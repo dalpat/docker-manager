@@ -23,7 +23,7 @@ struct WorkerMessage {
 
 pub fn run() {
     let app = adw::Application::builder()
-        .application_id("com.example.DockerManager")
+        .application_id("io.github.dalpat.dockermanager")
         .build();
 
     app.connect_activate(build_ui);
@@ -37,6 +37,7 @@ fn build_ui(app: &adw::Application) {
         .default_width(1080)
         .default_height(760)
         .build();
+    window.set_icon_name(Some("io.github.dalpat.dockermanager"));
     window.set_decorated(true);
     window.set_resizable(true);
     window.set_deletable(true);

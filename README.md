@@ -48,11 +48,34 @@ tar -xzf docker-manager-linux-x86_64.tar.gz
 
 The extracted binary keeps executable permissions.
 
+### GNOME Launcher Icon (Overview/Dock)
+
+To get a proper launcher icon in GNOME overview/dock, install the desktop entry and icon:
+
+```bash
+chmod +x scripts/install-local.sh
+./scripts/install-local.sh
+```
+
+Then launch from the app grid as **Docker Manager**.
+
 ### 3. Build Release
 
 ```bash
 cargo build --release
 ```
+
+### Build AppImage (Recommended for end users)
+
+```bash
+chmod +x scripts/build-appimage.sh
+./scripts/build-appimage.sh
+```
+
+Output:
+
+- `dist/docker-manager-linux-x86_64.AppImage`
+- `dist/docker-manager-linux-x86_64.AppImage.sha256`
 
 ### 4. Run Tests
 

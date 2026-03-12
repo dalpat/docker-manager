@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.dalpat.dockermanager</id>
+  <name>Docker Manager</name>
+  <summary>Native desktop cockpit for Docker containers</summary>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <description>
+    <p>
+      Docker Manager is a native Linux desktop app for inspecting and operating Docker containers.
+    </p>
+    <p>
+      It provides quick actions for start, stop, remove, and refresh with clear activity logging.
+    </p>
+  </description>
+  <launchable type="desktop-id">io.github.dalpat.dockermanager.desktop</launchable>
+  <url type="homepage">https://github.com/dalpat/docker-manager</url>
+</component>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Docker Manager
+Comment=Native desktop cockpit for Docker containers
+Exec=docker-manager
+Icon=io.github.dalpat.dockermanager
+Terminal=false
+Categories=Development;
+StartupNotify=true
+StartupWMClass=io.github.dalpat.dockermanager
