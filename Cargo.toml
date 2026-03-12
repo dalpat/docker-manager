@@ -1,0 +1,9 @@
+[package]
+name = "docker-manager"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gtk = { version = "0.5", package = "gtk4" }
+adw = { version = "0.2", package = "libadwaita" }
+glib = "0.16"
