@@ -79,4 +79,8 @@ Docker Manager is ideal for:
 
 ## License
 
-MIT (recommended to add `LICENSE` file if not already present)
+MIT. See [LICENSE](LICENSE).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
