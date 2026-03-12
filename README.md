@@ -49,19 +49,11 @@ cargo build --release
 cargo test
 ```
 
-## Suggested Screenshot Block
+## Screenshot
 
-Add screenshots to increase conversion when this is published:
-
-- `assets/screenshot-main.png` (full app view)
-- `assets/screenshot-actions.png` (start/stop/remove flow)
-- `assets/screenshot-log.png` (error/success logging)
-
-Then include:
-
-```md
 ![Docker Manager Main UI](assets/screenshot-main.png)
-```
+
+The current release includes one primary screenshot. More workflow screenshots can be added in future updates.
 
 ## Architecture
 
