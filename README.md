@@ -37,6 +37,17 @@ Built with Rust + GTK4, it gives you a focused UI to inspect containers, run act
 cargo run
 ```
 
+### Download Binary Release (Linux x86_64)
+
+Download `docker-manager-linux-x86_64.tar.gz` from Releases and extract:
+
+```bash
+tar -xzf docker-manager-linux-x86_64.tar.gz
+./docker-manager-linux-x86_64
+```
+
+The extracted binary keeps executable permissions.
+
 ### 3. Build Release
 
 ```bash

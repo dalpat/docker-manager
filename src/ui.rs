@@ -3,8 +3,8 @@ use crate::model::ContainerInfo;
 use adw::prelude::*;
 use glib::{Continue, MainContext, PRIORITY_DEFAULT};
 use gtk::{
-    Align, Box as GtkBox, Button, CheckButton, Entry, Label, ListBox, ListBoxRow, Orientation,
-    ScrolledWindow, SelectionMode, TextBuffer, TextView, WrapMode,
+    Align, Box as GtkBox, Button, CheckButton, Entry, Image, Label, ListBox, ListBoxRow,
+    Orientation, ScrolledWindow, SelectionMode, TextBuffer, TextView, WrapMode,
 };
 use std::thread;
 
@@ -74,11 +74,11 @@ fn build_ui(app: &adw::Application) {
     controls.append(&target_entry);
 
     let buttons = GtkBox::new(Orientation::Horizontal, 8);
-    let refresh_btn = Button::with_label("Refresh");
-    let start_btn = Button::with_label("Start");
-    let stop_btn = Button::with_label("Stop");
-    let remove_btn = Button::with_label("Remove");
-    let exit_btn = Button::with_label("Exit");
+    let refresh_btn = action_button("Refresh", "view-refresh-symbolic");
+    let start_btn = action_button("Start", "media-playback-start-symbolic");
+    let stop_btn = action_button("Stop", "media-playback-stop-symbolic");
+    let remove_btn = action_button("Remove", "user-trash-symbolic");
+    let exit_btn = action_button("Exit", "window-close-symbolic");
     refresh_btn.add_css_class("suggested-action");
     remove_btn.add_css_class("destructive-action");
 
@@ -450,4 +450,15 @@ fn action_description(action: &Action) -> &str {
         Action::Stop(_) => "Stopping container...",
         Action::Remove(_) => "Removing container...",
     }
+}
+
+fn action_button(label: &str, icon_name: &str) -> Button {
+    let button = Button::new();
+    let content = GtkBox::new(Orientation::Horizontal, 6);
+    let icon = Image::from_icon_name(icon_name);
+    let text = Label::new(Some(label));
+    content.append(&icon);
+    content.append(&text);
+    button.set_child(Some(&content));
+    button
 }
